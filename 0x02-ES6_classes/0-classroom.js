@@ -1,3 +1,4 @@
+/* eslint-disable no-underscore-dangle */
 export default class ClassRoom {
   constructor(maxStudentsSize) {
     this._maxStudentsSize = maxStudentsSize;
@@ -5,7 +6,7 @@ export default class ClassRoom {
 
   set maxStudentsSize(newMaxStudentsSize) {
     if (typeof newMaxStudentsSize === 'number') {
-        this._maxStudentsSize = newMaxStudentsSize;
+      this._maxStudentsSize = newMaxStudentsSize;
     }
   }
 
