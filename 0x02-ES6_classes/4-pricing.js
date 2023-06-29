@@ -1,7 +1,8 @@
-import Currency from "./3-currency";
+/* eslint-disable no-underscore-dangle */
+import Currency from './3-currency';
 
 export default class Pricing {
-  constructor(amount, currency){
+  constructor(amount, currency) {
     if (typeof amount !== 'number') {
       throw new TypeError('Amount must be a number');
     } else if (!(currency instanceof Currency)) {
@@ -23,7 +24,7 @@ export default class Pricing {
     this._amount = amount;
   }
 
-  get currency(){
+  get currency() {
     return this._currency;
   }
 
@@ -34,15 +35,15 @@ export default class Pricing {
     this._currency = currency;
   }
 
-  displayFullPrice(){
+  displayFullPrice() {
     return `${this._amount} ${this._currency.name} (${this._currency.code})`;
   }
 
   static covertPrice(amount, conversionRate) {
     if (typeof amount !== 'number') {
-        throw new TypeError('Amount must be a number');
+      throw new TypeError('Amount must be a number');
     } else if (typeof conversionRate !== 'number') {
-        throw new TypeError('Conversion rate must be a number');
+      throw new TypeError('Conversion rate must be a number');
     }
     return amount * conversionRate;
   }
