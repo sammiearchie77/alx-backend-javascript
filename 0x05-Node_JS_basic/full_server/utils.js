@@ -9,9 +9,9 @@ module.exports = function readDatabase(filePath) {
       } else {
         const lines = data.toString().split('\n');
         const noHeader = lines.slice(1);
-        for (let i = 0; i < noHeader.length; i += 1) {
-          if (noHeader[i]) {
-            const field = noHeader[i].toString().split(',');
+        for (const element of noHeader) {
+          if (element) {
+            const field = element.toString().split(',');
             if (Object.prototype.hasOwnProperty.call(students, field[3])) {
               students[field[3]].push(field[0]);
             } else {
