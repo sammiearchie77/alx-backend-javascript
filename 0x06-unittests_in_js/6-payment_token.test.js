@@ -1,16 +1,13 @@
-/* eslint-disable jest/valid-expect */
-import { describe, it } from 'mocha';
-import { expect as _expect } from 'chai';
-import getPaymentTokenFromAPI from './6-payment_token';
+const getPaymentTokenFromAPI = require("./6-payment_token");
+const { describe, it } = require("mocha");
+const expect = require("chai").expect;
 
-const { expect } = _expect;
-
-describe('getPaymentTokenFromAPI', () => {
-  it('async testing with done callback', () => new Promise((done) => {
-    getPaymentTokenFromAPI(true)
-      .then((data) => {
-        expect(data).to.have.property('data');
-        done();
-      });
-  }));
+describe("getPaymentTokenFromAPI", function() {
+    it("Async testing with done callback", function(done) {
+	getPaymentTokenFromAPI(true)
+	    .then((data) => {
+		expect(data).to.have.property('data');
+		done();
+	    });
+    });
 });
