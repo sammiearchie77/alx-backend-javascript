@@ -1,20 +1,21 @@
+/* eslint-disable default-case */
 class Utils {
   static calculateNumber(type, a, b) {
-    const aa = Math.round(a);
-    const bb = Math.round(b);
+    const an = Math.round(a);
+    const bn = Math.round(b);
     let c = 0;
     switch (type) {
       case 'SUM':
-        c = aa + bb;
+        c = an + bn;
         break;
       case 'SUBTRACT':
-        c = aa - bb;
+        c = an - bn;
         break;
       case 'DIVIDE':
-        if (bb === 0) {
+        if (bn === 0) {
           c = 'Error';
         } else {
-  	  c = aa / bb;
+          c = an / bn;
         }
         break;
     }
