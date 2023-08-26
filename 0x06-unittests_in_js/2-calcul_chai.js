@@ -1,3 +1,4 @@
+/* eslint-disable default-case */
 function calculateNumber(type, a, b) {
   const an = Math.round(a);
   const bn = Math.round(b);
@@ -11,7 +12,7 @@ function calculateNumber(type, a, b) {
       break;
     case 'DIVIDE':
       if (bn === 0) {
-        c = "Error";
+        c = 'Error';
       } else {
         c = an / bn;
       }
